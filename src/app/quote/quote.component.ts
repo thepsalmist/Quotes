@@ -7,14 +7,12 @@ import { Quote } from '../quote';
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
-
+  //create an array of instances of class Quote
   quotes = [
-    new Quote('The best quote is ', 'Xavier', 'xavier', new Date()),
-    new Quote('The best quote is ', 'Xavier', 'xavier', new Date()),
-    new Quote('The best quote is ', 'Xavier', 'xavier', new Date()),
+    new Quote('', '', '', new Date()),
 
   ]
-
+  newQuote = new Quote('', '', '', new Date());
   constructor() { }
 
   ngOnInit() {
