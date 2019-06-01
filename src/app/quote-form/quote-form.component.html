@@ -2,7 +2,7 @@
   <h1>The Greatest Quotes</h1>
   <hr>
 
-  <form #quoteForm="ngForm" class="">
+  <form #quoteForm="ngForm" (ngSubmit)="onSubmit()">
 
     {{quoteForm.value |json}}
     <hr>

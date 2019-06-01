@@ -9,6 +9,10 @@ import { Quote } from '../quote';
 export class QuoteFormComponent implements OnInit {
 
   newQuote = new Quote('The greatest stuff lives here', 'xavier', 'gianis', new Date());
+
+  onSubmit() {
+    console.log(this.newQuote)
+  }
   constructor() { }
 
   ngOnInit() {
