@@ -6,5 +6,5 @@
   <li>{{quote.name}}</li>
   <button (click)="showQuoteDetails(i)">Details</button>
   <!-- bind property quote to the expected input 'quote' in child component -->
-  <app-quote-details *ngIf="quote.quoteDescription" [quote]="quote"></app-quote-details>
+  <app-quote-details *ngIf="quote.quoteDescription" [quote]="quote" (deleteEvent)="delete($event,i)"></app-quote-details>
 </div>

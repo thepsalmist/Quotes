@@ -11,7 +11,7 @@ export class QuoteDetailsComponent implements OnInit {
 
   @Input() quote: Quote;
   @Output() deleteEvent = new EventEmitter();
-  status: boolean;
+
 
   callParentDelete(status: boolean) {
     //alert('Delete Quote')

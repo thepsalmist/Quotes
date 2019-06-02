@@ -1,7 +1,14 @@
 <div class="container fluid">
-  <p>The Quotes are as below:</p>
-  <p>Author:</p>
+  <p>Author:{{quote.author}}</p>
   <p>Votes:</p>
+  <div class="">
+    <button type="button" class="btn btn-info">
+      <span>Upvotes</span>
+    </button>
+    <button type="button" class="btn btn-info">
+      <span>Downvotes</span>
+    </button>
+  </div>
   <button (click)="callParentDelete(true)">Delete</button>
 
 
