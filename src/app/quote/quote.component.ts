@@ -8,6 +8,7 @@ import { Quote } from '../quote';
 })
 export class QuoteComponent implements OnInit {
   //create an array of instances of class Quote
+  quotes = [];
 
   constructor() { }
 

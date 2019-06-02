@@ -8,10 +8,12 @@ import { Quote } from '../quote';
 })
 export class QuoteFormComponent implements OnInit {
 
+
   newQuote = new Quote('The greatest stuff lives here', 'xavier', 'gianis', new Date());
+  //newQuotes = quotes.push(this.newQuote);
 
   onSubmit() {
-    console.log(this.newQuote)
+    console.log(this.newQuote);
   }
   constructor() { }
 

@@ -1,6 +1,6 @@
 export class Quote {
   //update properties of class Quote
-  constructor(public quote: string,
+  constructor(public name: string,
     public author: string,
     public person: string,
     public date: Date) { }
