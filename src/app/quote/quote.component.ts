@@ -13,6 +13,12 @@ export class QuoteComponent implements OnInit {
   showQuoteDetails(index) {
     this.quotes[index].quoteDescription = !this.quotes[index].quoteDescription
   }
+  delete(deleteEvent, index) {
+    if (deleteEvent) {
+      let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].name}`)
+
+    }
+  }
   constructor() { }
 
   ngOnInit() {
