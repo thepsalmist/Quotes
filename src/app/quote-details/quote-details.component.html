@@ -2,16 +2,16 @@
   <p>Author:{{quote.author}}</p>
   <p>Votes:{{quote.vote}}</p>
   <div class="button">
-    <button type="button" class="btn btn-info" (click)="likes()">
+    <button type="button" class="btn btn-primary" (click)="likes()">
       <span>{{upVote}}Upvotes</span>
     </button>
-    <button type="button" class="btn btn-info" (click)="dislikes()">
+    <button type="button" class="btn btn-primary" (click)="dislikes()">
       <span>{{downVote}}Downvotes</span>
     </button>
   </div>
 
 
-  <button (click)="callParentDelete(true)" class="btn btn-danger">Delete</button>
+  <button (click)="callParentDelete(true)" class="btn btn-primary">Delete</button>
 
 
 </div>

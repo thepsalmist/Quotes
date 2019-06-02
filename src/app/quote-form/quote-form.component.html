@@ -1,5 +1,4 @@
 <div class="container-fluid">
-  <h1>The Greatest Quotes</h1>
   <hr>
   <form #quoteForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
     <!--
@@ -9,7 +8,7 @@
     <!-- Quote Form -->
     <div class="form-group">
       <label for="name">Quote:</label>
-      <textarea class="form-group" [(ngModel)]="newQuote.name" name="name" #name="ngModel" [class.is-invalid]="name.invalid && name.touched" required rows="5" cols="80"></textarea>
+      <textarea class="form-control" [(ngModel)]="newQuote.name" name="name" #name="ngModel" [class.is-invalid]="name.invalid && name.touched" required rows="3" cols="80"></textarea>
       <small class="text-danger" [class.d-none]="name.valid || name.untouched">*Kindly type in a quote</small>
     </div>
     <!-- Quote Author -->
@@ -28,6 +27,6 @@
       <label for="date">Date</label>
       <input type="date" [(ngModel)]="newQuote.date" name="completion">
     </div>
-    <button [disabled]="quoteForm.form.invalid" class="btn btn-lg btn-primary" type="submit">Submit</button>
+    <button [disabled]="quoteForm.form.invalid" class="btn btn-primary" type="submit">Submit</button>
   </form>
 </div>
