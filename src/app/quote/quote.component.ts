@@ -16,8 +16,15 @@ export class QuoteComponent implements OnInit {
   delete(deleteEvent, index) {
     if (deleteEvent) {
       let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].name}`)
-
+      if (toDelete) {
+        this.quotes.splice(index, 1);
+      }
     }
+  }
+  addQuote(quote) {
+    let quoteLength = this.quotes.length;
+    quote.id = quoteLength + 1;
+    this.quotes.push(quote)
   }
   constructor() { }
 
