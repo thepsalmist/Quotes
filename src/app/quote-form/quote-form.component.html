@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <h1>The Greatest Quotes</h1>
   <hr>
-  <form #quoteForm="ngForm" (ngSubmit)="onSubmit()">
+  <form #quoteForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
     <!--
     {{quoteForm.value |json}}
     <hr>
