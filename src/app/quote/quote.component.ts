@@ -10,6 +10,9 @@ export class QuoteComponent implements OnInit {
   //create an array of instances of class Quote
   quotes = [];
 
+  showQuoteDetails(index) {
+    this.quotes[index].quoteDescription = !this.quotes[index].quoteDescription
+  }
   constructor() { }
 
   ngOnInit() {
