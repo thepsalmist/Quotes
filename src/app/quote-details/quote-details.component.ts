@@ -11,6 +11,10 @@ export class QuoteDetailsComponent implements OnInit {
 
   @Input() quote: Quote;
 
+  callParentDelete() {
+    alert('Delete Quote')
+  }
+
   constructor() { }
 
   ngOnInit() {
