@@ -9,7 +9,7 @@ import { Quote } from '../quote';
 export class QuoteFormComponent implements OnInit {
 
 
-  newQuote = new Quote(1, '', '', '', new Date());
+  newQuote = new Quote(1, '', '', '', new Date(), 0);
   @Output() newQuoteEvent = new EventEmitter();
 
   //newQuotes = quotes.push(this.newQuote);
@@ -18,7 +18,7 @@ export class QuoteFormComponent implements OnInit {
     console.log('new quote added');
     console.log(this.newQuote)
     this.newQuoteEvent.emit(this.newQuote);
-    this.newQuote = new Quote(1, '', '', '', new Date());
+    this.newQuote = new Quote(1, '', '', '', new Date(), 0);
 
   }
   constructor() { }

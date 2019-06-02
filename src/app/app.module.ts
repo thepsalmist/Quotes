@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { QuoteComponent } from './quote/quote.component';
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
+import { QuotehighlightDirective } from './quotehighlight.directive';
+import { UiModule } from './ui/ui.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuoteFormComponent,
     QuoteComponent,
-    QuoteDetailsComponent
+    QuoteDetailsComponent,
+    QuotehighlightDirective
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    UiModule
   ],
   providers: [],
   bootstrap: [AppComponent]

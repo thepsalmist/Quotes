@@ -1,10 +1,12 @@
-<div class="container-fluid">
-  <h1>QUOTES & WISDOM</h1>
-  <app-quote-form (newQuoteEvent)="addQuote($event)"></app-quote-form>
-</div>
-<div class="" *ngFor="let quote of quotes; let i=index ">
-  <li>{{quote.name}}</li>
-  <button (click)="showQuoteDetails(i)">Details</button>
-  <!-- bind property quote to the expected input 'quote' in child component -->
-  <app-quote-details *ngIf="quote.quoteDescription" [quote]="quote" (deleteEvent)="delete($event,i)"></app-quote-details>
-</div>
+<app-layout>
+  <div class="jumbotron">
+    <h1>QUOTES & WISDOM</h1>
+    <app-quote-form (newQuoteEvent)="addQuote($event)"></app-quote-form>
+  </div>
+  <div class="" *ngFor="let quote of quotes; let i=index ">
+    <li appQuotehighlight>{{quote.name}}</li>
+    <button (click)="showQuoteDetails(i)">Details</button>
+    <!-- bind property quote to the expected input 'quote' in child component -->
+    <app-quote-details *ngIf="quote.quoteDescription" [quote]="quote" (deleteEvent)="delete($event,i)"></app-quote-details>
+  </div>
+</app-layout>
