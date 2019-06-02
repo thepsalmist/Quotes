@@ -2,6 +2,10 @@
   <h1>QUOTES & WISDOM</h1>
   <app-quote-form></app-quote-form>
 </div>
-<ul>
-  <li *ngFor="let quote of quotes ">{{quote.name}}</li>
-</ul>
+<div class="">
+  <ul>
+    <li *ngFor="let quote of quotes ">{{quote.name}}</li>
+    <!-- bind property quote to the expected input 'quote' in child component -->
+    <app-quote-details [quote]="quote"></app-quote-details>
+  </ul>
+</div>
