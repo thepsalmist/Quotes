@@ -11,10 +11,10 @@
     </div>
     <br>
     <hr>
-    <div class="card text-centre" style="width: 18rem;" *ngFor="let quote of quotes; let i=index ">
-      <ul class="list-group">
+    <div class="container-fluid" style="width: 18rem;" *ngFor="let quote of quotes; let i=index" id="quoteDetail">
+      <ul class="list-group" style="list-style:none">
         <li class="list group item" appQuotehighlight>{{quote.name}}</li>
-        <button class="btn btn-primary" (click)="showQuoteDetails(i)">Details</button>
+        <button class="btn btn-dark" (click)="showQuoteDetails(i)">Details</button>
         <!-- bind property quote to the expected input 'quote' in child component -->
         <app-quote-details *ngIf="quote.quoteDescription" [quote]="quote" (deleteEvent)="delete($event,i)"></app-quote-details>
       </ul>
