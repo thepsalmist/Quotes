@@ -1,15 +1,17 @@
 <div class="container fluid">
   <p>Author:{{quote.author}}</p>
   <p>Votes:</p>
-  <div class="">
-    <button type="button" class="btn btn-info">
-      <span>Upvotes</span>
+  <div class="button">
+    <button type="button" class="btn btn-info" (click)="likes()">
+      <span>{{upVote}}Upvotes</span>
     </button>
-    <button type="button" class="btn btn-info">
-      <span>Downvotes</span>
+    <button type="button" class="btn btn-info" (click)="dislikes()">
+      <span>{{downVote}}Downvotes</span>
     </button>
   </div>
-  <button (click)="callParentDelete(true)">Delete</button>
+
+
+  <button (click)="callParentDelete(true)" class="btn btn-danger">Delete</button>
 
 
 </div>

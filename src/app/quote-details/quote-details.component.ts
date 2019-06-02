@@ -12,6 +12,15 @@ export class QuoteDetailsComponent implements OnInit {
   @Input() quote: Quote;
   @Output() deleteEvent = new EventEmitter();
 
+  upVote = 0;
+  downVote = 0;
+
+  likes() {
+    this.upVote += 1;
+  }
+  dislikes() {
+    this.downVote += 1;
+  }
 
   callParentDelete(status: boolean) {
     //alert('Delete Quote')
