@@ -4,10 +4,10 @@
   <p>Votes:{{quote.vote}}</p>
   <div class="button">
     <button type="button" class="btn btn-dark" (click)="likes()">
-      <span>{{upVote}}Upvotes</span>
+      <span>Upvotes{{likes()}}</span>
     </button>
     <button type="button" class="btn btn-dark" (click)="dislikes()">
-      <span>{{downVote}}Downvotes</span>
+      <span>Downvotes{{dislikes()}}</span>
     </button>
   </div>
 

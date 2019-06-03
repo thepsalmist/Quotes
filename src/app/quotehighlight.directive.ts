@@ -5,8 +5,12 @@ import { Directive, ElementRef } from '@angular/core';
 })
 export class QuotehighlightDirective {
 
-  constructor(private elem: ElementRef) {
-    this.elem.nativeElement.style.backgroundColor = 'yellow';
+  constructor(private elem: ElementRef) { }
+  highlighElement() {
+    this.elem.nativeElement.style.backgroundColor = '#F39C12  ';
+    this.elem.nativeElement.style.color = 'black';
   }
-
+  ngOnInit() {
+    this.highlighElement();
+  }
 }

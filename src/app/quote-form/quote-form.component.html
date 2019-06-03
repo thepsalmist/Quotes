@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <hr>
-  <form #quoteForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+  <form #quoteForm="ngForm" (ngSubmit)="onSubmit(); quoteForm.reset()" novalidate>
     <!--
     {{quoteForm.value |json}}
     <hr>
